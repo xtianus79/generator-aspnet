@@ -68,6 +68,9 @@
     "yosay": "~1.0.3",
     "mkdirp": "^0.5.0"
   },
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  },
   "peerDependencies": {
     "yo": ">=1.0.0"
   },
