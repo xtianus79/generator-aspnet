@@ -1,6 +1,6 @@
 {
   "name": "generator-aspnet-xtianus",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Yeoman generator for ASP.NET 5 apps",
   "license": "Apache License 2.0",
   "main": "app/index.js",
@@ -23,33 +23,33 @@
       "email": "shirhatti@outlook.com",
       "url": "https://github.com/shirhatti"
     },
-        {
-            "name": "Sayed Hashimi",
-            "email": "sayed.hashimi@gmail.com"
+    {
+      "name": "Sayed Hashimi",
+      "email": "sayed.hashimi@gmail.com"
     },
-        {
-            "name": "Shayne Boyer",
-            "email": "spboyer@live.com",
-            "url": "https://github.com/spboyer"
+    {
+      "name": "Shayne Boyer",
+      "email": "spboyer@live.com",
+      "url": "https://github.com/spboyer"
     },
-        {
-            "name": "Jonathan Channon",
-            "email": "jonathan@jonathanchannon.com"
+    {
+      "name": "Jonathan Channon",
+      "email": "jonathan@jonathanchannon.com"
     },
-        {
-            "name": "Peter Blazejewicz",
-            "email": "peter.blazejewicz@gmail.com",
-            "url": "https://github.com/peterblazejewicz"
+    {
+      "name": "Peter Blazejewicz",
+      "email": "peter.blazejewicz@gmail.com",
+      "url": "https://github.com/peterblazejewicz"
     },
-        {
-            "name": "Suhas Joshi",
-            "email": "suhasbjoshi@hotmail.com"
+    {
+      "name": "Suhas Joshi",
+      "email": "suhasbjoshi@hotmail.com"
     }
   ],
-    "engines": {
-        "node": ">=0.10.0"
-    },
-    "keywords": [
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "keywords": [
     "yeoman-generator",
     "ASP.NET",
     "aspnet",
