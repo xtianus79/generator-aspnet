@@ -23,33 +23,33 @@
       "email": "shirhatti@outlook.com",
       "url": "https://github.com/shirhatti"
     },
-    {
-      "name": "Sayed Hashimi",
-      "email": "sayed.hashimi@gmail.com"
+        {
+            "name": "Sayed Hashimi",
+            "email": "sayed.hashimi@gmail.com"
     },
-    {
-      "name": "Shayne Boyer",
-      "email": "spboyer@live.com",
-      "url": "https://github.com/spboyer"
+        {
+            "name": "Shayne Boyer",
+            "email": "spboyer@live.com",
+            "url": "https://github.com/spboyer"
     },
-    {
-      "name": "Jonathan Channon",
-      "email": "jonathan@jonathanchannon.com"
+        {
+            "name": "Jonathan Channon",
+            "email": "jonathan@jonathanchannon.com"
     },
-    {
-      "name": "Peter Blazejewicz",
-      "email": "peter.blazejewicz@gmail.com",
-      "url": "https://github.com/peterblazejewicz"
+        {
+            "name": "Peter Blazejewicz",
+            "email": "peter.blazejewicz@gmail.com",
+            "url": "https://github.com/peterblazejewicz"
     },
-    {
-      "name": "Suhas Joshi",
-      "email": "suhasbjoshi@hotmail.com"
+        {
+            "name": "Suhas Joshi",
+            "email": "suhasbjoshi@hotmail.com"
     }
   ],
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "keywords": [
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "keywords": [
     "yeoman-generator",
     "ASP.NET",
     "aspnet",
@@ -63,16 +63,13 @@
   "dependencies": {
     "chai": "~2.2.0",
     "chalk": "~1.0.0",
-    "mocha": "^2.2.1",
-    "yeoman-generator": "~0.18.10",
+    "uuid": "^2.0.1",
+    "yeoman-generator": "~0.19.1",
     "yosay": "~1.0.3",
     "mkdirp": "^0.5.0"
   },
   "devDependencies": {
     "mocha": "^2.2.1"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0"
   },
   "scripts": {
     "test": "mocha"
