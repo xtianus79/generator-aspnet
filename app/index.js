@@ -232,6 +232,8 @@ var AspnetGenerator = yeoman.generators.Base.extend({
         case 'foundation5':
             this.sourceRoot(path.join(__dirname, '../templates/projects/' + this.type));
 
+            this.copy(this.sourceRoot() + '/../../gitignore.txt', this.applicationName + '/.gitgnore');
+
             this.template(this.sourceRoot() + '/startup.cs', 'Startup.cs', this.templatedata);
 
             this.template(this.sourceRoot() + '/bower.json', 'bower.json', this.templatedata);

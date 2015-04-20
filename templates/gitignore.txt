@@ -107,6 +107,9 @@ _NCrunch_*
 *.mm.*
 AutoTest.Net/
 
+# App components for Foundation extension
+app/bower_components
+
 # Web workbench (sass)
 .sass-cache/
 
