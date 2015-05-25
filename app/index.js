@@ -241,7 +241,7 @@ var AspnetGenerator = yeoman.generators.Base.extend({
             this.fs.copyTpl(this.sourceRoot() + '/models_manageview.cs', 'Models/ManageViewModels.cs', this.templatedata);
             // controllers
             this.fs.copyTpl(this.sourceRoot() + '/controllers_account.cs', 'Controllers/AccountController.cs', this.templatedata);
-            tthis.fs.copyTpl(this.sourceRoot() + '/controllers_home.cs', 'Controllers/HomeController.cs', this.templatedata);
+            this.fs.copyTpl(this.sourceRoot() + '/controllers_home.cs', 'Controllers/HomeController.cs', this.templatedata);
             this.fs.copyTpl(this.sourceRoot() + '/controllers_manage.cs', 'Controllers/ManageController.cs', this.templatedata);
             // compiler
             this.fs.copyTpl(this.sourceRoot() + '/compiler_preprocess_razorprecompilation.cs', 'Compiler/Preprocess/RazorPreCompilation.cs', this.templatedata);
