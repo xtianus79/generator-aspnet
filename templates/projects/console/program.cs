@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApp1
+namespace <%= namespace %>
 {
     public class Program
     {

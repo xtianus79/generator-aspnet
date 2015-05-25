@@ -21,6 +21,9 @@ Yeoman generator for ASP.NET vNext projects with additional templates
 
 ## Getting Started
 
+- Dependencies:
+    - node.js: `brew install node` for OSX, `choco install node` for Windows
+    - Yeoman: `npm install -g yo`
 - Install: `npm i -g generator-aspnet-xtianus`
 - Run: `yo aspnet-xtianus`
 
@@ -126,9 +129,10 @@ $ grunt compile-jade
 [Starter Web Foundation 5 Getting Started: Wiki](https://github.com/xtianus79/generator-aspnet/blob/master/templates/projects/foundation5/README.md)
 
 The Empty Application, Web Application, Web API Application are based on the new templates recently introduced with Visual Studio CTP 6 release, and you can read about this new templates on blog post accompanying CTP 6 release:  
+
 [ASP.NET 5 Updates and other improvements for Web Developers in Visual Studio 2015 CTP 6](http://blogs.msdn.com/b/webdev/archive/2015/02/23/aspnet-5-updates-for-feb-2015.aspx)
 
-The Nancy project is based on framework's "Hello World" template:  
+The Nancy project is based on framework's "Hello World" template:
 [Nancy Getting Started: Introduction](https://github.com/NancyFx/Nancy/wiki/Introduction)
 
 ## Related yeoman generators
@@ -159,6 +163,7 @@ Available sub generators (_to create files after the project has been created_):
 * [aspnet-xtianus:CoffeeScript](#coffeescript)
 * [aspnet-xtianus:Config](#config)
 * [aspnet-xtianus:Gulpfile](#gulpfile)
+* [aspnet-xtianus:gitignore](#gitignore)
 * [aspnet-xtianus:HTMLPage](#htmlpage)
 * [aspnet-xtianus:JavaScript](#javascript)
 * [aspnet-xtianus:JScript](#jscript)
@@ -171,7 +176,7 @@ Available sub generators (_to create files after the project has been created_):
 
 ### MvcController
 
-Creates a new ASP.NET 5 MvcController class 
+Creates a new ASP.NET 5 MvcController class
 
 Example:
 
@@ -181,7 +186,7 @@ yo aspnet-xtianus:MvcController ContactController
 
 Produces `/ContactController.cs`
 
-```
+```cs
 using Microsoft.AspNet.Mvc;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -201,7 +206,7 @@ namespace MyNamespace
 
 ### MvcView
 
-Creates a new ASP.NET 5 MvcView page file 
+Creates a new ASP.NET 5 MvcView page file
 
 Example:
 
@@ -222,7 +227,7 @@ Produces `/ContactView.cshtml`
 ```
 ### WebApiController
 
-Creates a new ASP.NET 5 WebApiController class 
+Creates a new ASP.NET 5 WebApiController class
 
 Example:
 
@@ -232,7 +237,7 @@ yo aspnet-xtianus:WebApiController ValuesController
 
 Produces `/ValuesController.cs`
 
-```
+```cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -283,7 +288,7 @@ namespace MyNamespace.Controllers
 
 ### Class
 
-Creates a new ASP.NET 5 Class 
+Creates a new ASP.NET 5 Class
 
 Example:
 
@@ -293,7 +298,7 @@ yo aspnet-xtianus:Class Contact
 
 Produces `/Contact.cs`
 
-```
+```cs
 using System;
 
 namespace MyNamespace
@@ -364,6 +369,18 @@ yo aspnet-xtianus:Gulpfile
 ```
 
 Produces `gulpfile.js`
+
+### gitignore
+
+Creates a new .gitignore file
+
+Example:
+
+```
+yo aspnet:gitignore
+```
+
+Produces `.gitignore`
 
 ### HTMLPage
 
