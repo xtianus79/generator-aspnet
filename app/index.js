@@ -161,11 +161,11 @@ var AspnetGenerator = yeoman.generators.Base.extend({
             if (this.options.gulp) {
                 this.fs.copyTpl(this.sourceRoot() + '/_gulp_project.json', this.applicationName + '/project.json', this.templatedata);
                 this.fs.copyTpl(this.sourceRoot() + '/_gulp_package.json', this.applicationName + '/package.json', this.templatedata);
-                this.fs.copy(this.sourceRoot() + '/_gulpfile.js', this.applicationName + '/gulpfile.js');
+                this.fs.copy(this.sourceRoot() + '/_gulpfile.js', this.applicationName + '/gulpfile.js', this.templatedata);
             } else {
                 this.fs.copyTpl(this.sourceRoot() + '/_grunt_project.json', this.applicationName + '/project.json', this.templatedata);
                 this.fs.copyTpl(this.sourceRoot() + '/_grunt_package.json', this.applicationName + '/package.json', this.templatedata);
-                this.fs.copy(this.sourceRoot() + '/_gruntfile.js', this.applicationName + '/gruntfile.js');
+                this.fs.copy(this.sourceRoot() + '/_gruntfile.js', this.applicationName + '/gruntfile.js', this.templatedata);
             }
             // models
             this.fs.copyTpl(this.sourceRoot() + '/models_accountview.cs', this.applicationName + '/Models/AccountViewModels.cs', this.templatedata);
@@ -216,7 +216,7 @@ var AspnetGenerator = yeoman.generators.Base.extend({
             this.fs.copyTpl(this.sourceRoot() + '/views_viewstart.cshtml', this.applicationName + '/Views/_ViewStart.cshtml', this.templatedata);
 
             /// wwwroot
-            this.directory(this.templatePath('/wwwroot'), this.destinationPath(this.applicationName + '/wwwroot'));
+            this.directory(this.sourceRoot() + '/wwwroot', this.applicationName + '/wwwroot');
             break;
 
         case 'foundation5':
@@ -227,11 +227,11 @@ var AspnetGenerator = yeoman.generators.Base.extend({
             this.fs.copyTpl(this.sourceRoot() + '/config.json', 'config.json', this.templatedata);
             this.fs.copyTpl(this.sourceRoot() + '/messageservice.cs', 'MessageService.cs', this.templatedata);
             if (this.options.gulp) {
-                this.fs.copyTpl(this.sourceRoot() + '/_gulp_project.json', 'project.json');
+                this.fs.copyTpl(this.sourceRoot() + '/_gulp_project.json', 'project.json', this.templatedata);
                 this.fs.copyTpl(this.sourceRoot() + '/_gulp_package.json', 'package.json', this.templatedata);
-                this.fs.copyTpl(this.sourceRoot() + '/_gulpfile.js', 'gulpfile.js');
+                this.fs.copyTpl(this.sourceRoot() + '/_gulpfile.js', 'gulpfile.js', this.templatedata);
             } else {
-                this.fs.copyTpl(this.sourceRoot() + '/_grunt_project.json', 'project.json');
+                this.fs.copyTpl(this.sourceRoot() + '/_grunt_project.json', 'project.json', this.templatedata);
                 this.fs.copyTpl(this.sourceRoot() + '/_grunt_package.json', 'package.json', this.templatedata);
                 this.fs.copyTpl(this.sourceRoot() + '/_gruntfile.js', 'gruntfile.js', this.templatedata);
             }
@@ -459,10 +459,10 @@ var AspnetGenerator = yeoman.generators.Base.extend({
                     console.log('\r');
                     console.log(chalk.bold.red('==================================================================================='));
                     console.log('\r');
-                    console.log(chalk.green('    kpm restore'));
-                    console.log(chalk.green('    kpm build'));
-                    console.log(chalk.green('    k run') + ' for console projects');
-                    console.log(chalk.green('    k kestrel') + ' or ' + chalk.green('k web') + ' for web projects');
+                    console.log(chalk.green('    dnu restore'));
+                    console.log(chalk.green('    dnu build'));
+                    console.log(chalk.green('    dnx . run') + ' for console projects');
+                    console.log(chalk.green('    dnx . kestrel') + ' or ' + chalk.green('dnx . web') + ' for web projects');
                     console.log('\r');
                     console.log(chalk.bold.red('==================================================================================='));
                     console.log('\r');
