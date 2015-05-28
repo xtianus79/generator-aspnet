@@ -455,7 +455,7 @@ var AspnetGenerator = yeoman.generators.Base.extend({
                 callback: function () {
                     console.log(chalk.bold.red('==================================================================================='));
                     console.log('\r');
-                    console.log(chalk.bold.yellow('    Almost finished... || Below are the kpm instructions'));
+                    console.log(chalk.bold.yellow('    Almost finished... || Below are the DNVM instructions'));
                     console.log('\r');
                     console.log(chalk.bold.red('==================================================================================='));
                     console.log('\r');
