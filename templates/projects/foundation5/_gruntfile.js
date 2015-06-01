@@ -183,7 +183,6 @@ module.exports = function(grunt) {
 
         useminPrepare: {
 		    html: ['<%%= app %>/index.html'],
-            cshtml: ['<%%= app %>/index.cshtml', '<%%= app %>/_header.cshtml', '<%%= app %>/_footer.cshtml'],
 			options: {
 				dest: '<%%= dist %>'
 			}
