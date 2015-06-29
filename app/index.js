@@ -10,7 +10,7 @@ var AspnetGenerator = yeoman.generators.Base.extend({
     constructor: function() {
         yeoman.generators.Base.apply(this, arguments);
         // only implemented for web template
-        this.option('gulp');
+        this.option('grunt');
     },
 
     init: function() {
@@ -216,7 +216,8 @@ var AspnetGenerator = yeoman.generators.Base.extend({
                 this.fs.copyTpl(this.sourceRoot() + '/views_viewstart.cshtml', this.applicationName + '/Views/_ViewStart.cshtml', this.templatedata);
 
                 /// wwwroot
-                this.directory(this.templatePath('/wwwroot'), this.destinationPath(this.applicationName + '/wwwroot'));
+                //this.directory(this.templatePath('/wwwroot'), this.destinationPath(this.applicationName + '/wwwroot'));
+                this.directory(this.sourceRoot() + '/wwwroot', this.applicationName + '/wwwroot');
                 break;
 
             case 'foundation5':
@@ -284,8 +285,8 @@ var AspnetGenerator = yeoman.generators.Base.extend({
                 this.fs.copyTpl(this.sourceRoot() + '/views_viewstart.cshtml', 'Views/_ViewStart.cshtml', this.templatedata);
 
                 /// wwwroot
-                this.directory(this.templatePath('/wwwroot'), this.destinationPath('wwwroot'));
-                //this.directory(this.sourceRoot() + '/wwwroot', 'wwwroot');
+                //this.directory(this.templatePath('/wwwroot'), this.destinationPath('wwwroot'));
+                this.directory(this.sourceRoot() + '/wwwroot', 'wwwroot');
                 break;
             case 'nancy':
                 this.sourceRoot(path.join(__dirname, '../templates/projects/' + this.type));
