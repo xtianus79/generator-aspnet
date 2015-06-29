@@ -33,7 +33,7 @@ Yeoman generator for ASP.NET vNext projects with additional templates
 
 * `yo aspnet-xtianus` shows a wizard for generating a new ASP.NET app
 
-* `yo aspnet-xtianus --gulp` generates gulp.js files for **web** template instead of grunt.js
+* `yo aspnet --grunt` generates gruntfile.js files for **web** template instead of gulp.js
 
 * `yo aspnet-xtianus --help` shows flags and other configurable options
 
