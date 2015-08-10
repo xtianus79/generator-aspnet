@@ -33,7 +33,7 @@ Yeoman generator for ASP.NET vNext projects with additional templates
 
 * `yo aspnet-xtianus` shows a wizard for generating a new ASP.NET app
 
-* `yo aspnet --grunt` generates gruntfile.js files for **web** template instead of gulp.js
+* `yo aspnet --grunt` generates Gruntfile.js files for **web** template instead of gulp.js
 
 * `yo aspnet-xtianus --help` shows flags and other configurable options
 
@@ -44,6 +44,7 @@ Full, template based projects available in generator:
 - Empty Application
 - Console Application
 - Web Application
+- Web Application Basic [without Membership and Authorization]
 - **Starter Web Application - Foundation 5 [Readme](https://github.com/xtianus79/generator-aspnet/blob/master/templates/projects/foundation5/README.md)**
 - Web API Application
 - Nancy ASP.NET Application
@@ -132,6 +133,9 @@ The Empty Application, Web Application, Web API Application are based on the new
 
 [ASP.NET 5 Updates and other improvements for Web Developers in Visual Studio 2015 CTP 6](http://blogs.msdn.com/b/webdev/archive/2015/02/23/aspnet-5-updates-for-feb-2015.aspx)
 
+The Empty Application, Web Application, Web Application Basic (a.k.a. Web Application No Auth), Web API Application are based on the new templates recently introduced with Visual Studio 2015 RC release, with updates for `beta5`. You can read about these new templates on the blog post accompanying the `beta5` release:
+[Updates to ASP.NET 5 yeoman generators for beta 5](http://blogs.msdn.com/b/webdev/archive/2015/07/04/updates-to-asp-net-5-yeoman-generators-for-beta-5.aspx)
+
 The Nancy project is based on framework's "Hello World" template:
 [Nancy Getting Started: Introduction](https://github.com/NancyFx/Nancy/wiki/Introduction)
 
@@ -157,22 +161,39 @@ Available sub generators (_to create files after the project has been created_):
 * [aspnet-xtianus:MvcController](#mvccontroller)
 * [aspnet-xtianus:MvcView](#mvcview)
 * [aspnet-xtianus:WebApiContoller](#webapicontroller)
+* [aspnet-xtianus:AngularModule](#angularmodule)
+* [aspnet-xtianus:AngularController](#angularcontroller)
+* [aspnet-xtianus:AngularControllerAs](#angularcontrolleras)
+* [aspnet-xtianus:AngularDirective](#angulardirective)
+* [aspnet-xtianus:AngularFactory](#angularfactory)
 * [aspnet-xtianus:Class](#class)
-* [aspnet-xtianus:StartupClass](#startupclass) 
+* [aspnet-xtianus:Interface](#interface)
+* [aspnet-xtianus:StartupClass](#startupclass)
 * [aspnet-xtianus:BowerJson](#bowerjson)
 * [aspnet-xtianus:CoffeeScript](#coffeescript)
 * [aspnet-xtianus:Config](#config)
 * [aspnet-xtianus:Gulpfile](#gulpfile)
+* [aspnet-xtianus:Gruntfile](#gruntfile)
 * [aspnet-xtianus:gitignore](#gitignore)
 * [aspnet-xtianus:HTMLPage](#htmlpage)
 * [aspnet-xtianus:JavaScript](#javascript)
 * [aspnet-xtianus:JScript](#jscript)
 * [aspnet-xtianus:JSON](#json)
+* [aspnet-xtianus:JSONSchema](#jsonschema)
+* [aspnet-xtianus:JSX](#jsx)
+* [aspnet-xtianus:Middleware](#middleware)
 * [aspnet-xtianus:PackageJson](#packagejson)
+* [aspnet-xtianus:StyleSheet](#stylesheet)
+* [aspnet-xtianus:StyleSheetScss](#stylesheetscss)
+* [aspnet-xtianus:StyleSheetLess](#stylesheetless)
+* [aspnet-xtianus:TagHelper](#taghelper)
 * [aspnet-xtianus:TextFile](#textfile)
 * [aspnet-xtianus:TypeScript](#typescript)
+* [aspnet-xtianus:TypeScriptConfig](#typescriptconfig)
 
 ** Note: files generated are created in the working directory, no conventions are forced **
+
+[Return to top](#top)
 
 ### MvcController
 
@@ -204,6 +225,8 @@ namespace MyNamespace
 }
 ```
 
+[Return to top](#top)
+
 ### MvcView
 
 Creates a new ASP.NET 5 MvcView page file
@@ -225,6 +248,9 @@ Produces `/ContactView.cshtml`
 }
 
 ```
+
+[Return to top](#top)
+
 ### WebApiController
 
 Creates a new ASP.NET 5 WebApiController class
@@ -283,8 +309,74 @@ namespace MyNamespace.Controllers
         }
     }
 }
-
 ```
+
+[Return to top](#top)
+
+### AngularModule
+
+Creates AngularJS module file
+
+Example:
+```
+yo aspnet:AngularModule filename
+```
+
+Produces `filename.js`
+
+[Return to top](#top)
+
+### AngularController
+
+Creates AngularJS controller file using $scope
+
+Example:
+```
+yo aspnet:AngularController filename
+```
+
+Produces `filename.js`
+
+[Return to top](#top)
+
+### AngularControllerAs
+
+Creates AngularJS controller file using `Controller As` syntax.
+
+Example:
+```
+yo aspnet:AngularControllerAs filename
+```
+
+Produces `filename.js`
+
+[Return to top](#top)
+
+### AngularDirective
+
+Creates AngularJS directive file.
+
+Example:
+```
+yo aspnet:AngularDirective filename
+```
+
+Produces `filename.js`
+
+[Return to top](#top)
+
+### AngularFactory
+
+Creates AngularJS factory file.
+
+Example:
+```
+yo aspnet:AngularFactory filename
+```
+
+Produces `filename.js`
+
+[Return to top](#top)
 
 ### Class
 
@@ -310,6 +402,22 @@ namespace MyNamespace
 }
 ```
 
+[Return to top](#top)
+
+### Interface
+
+Creates a new ASP.NET 5 Interface
+
+Example:
+
+```
+yo aspnet:Interface IContact
+```
+
+Produces `/IContact.cs`
+
+[Return to top](#top)
+
 ### StartupClass
 
 Creates a new Startup Class file
@@ -322,9 +430,11 @@ yo aspnet-xtianus:StartupClass
 
 Produces `Startup.cs`
 
+[Return to top](#top)
+
 ### BowerJson
 
-Creates a new Bower file
+Creates a new `bower.json` and configuration file.
 
 Example:
 
@@ -332,7 +442,9 @@ Example:
 yo aspnet-xtianus:BowerJson
 ```
 
-Produces `bower.json`
+Produces `bower.json` and `.bowerrc`
+
+[Return to top](#top)
 
 ### CoffeeScript
 
@@ -346,6 +458,8 @@ yo aspnet-xtianus:CoffeeScript filename
 
 Produces `filename.coffee`
 
+[Return to top](#top)
+
 ### Config
 
 Creates a new config.json file
@@ -357,6 +471,8 @@ yo aspnet-xtianus:Config
 ```
 
 Produces `config.json`
+
+[Return to top](#top)
 
 ### Gulpfile
 
@@ -370,6 +486,22 @@ yo aspnet-xtianus:Gulpfile
 
 Produces `gulpfile.js`
 
+[Return to top](#top)
+
+### Gruntfile
+
+Creates a new `Grunt` file
+
+Example:
+
+```
+yo aspnet:Gruntfile
+```
+
+Produces `Gruntfile.js`
+
+[Return to top](#top)
+
 ### gitignore
 
 Creates a new .gitignore file
@@ -381,6 +513,8 @@ yo aspnet:gitignore
 ```
 
 Produces `.gitignore`
+
+[Return to top](#top)
 
 ### HTMLPage
 
@@ -394,6 +528,8 @@ yo aspnet-xtianus:HTMLPage filename
 
 Produces `filename.html`
 
+[Return to top](#top)
+
 ### JavaScript
 
 Creates a new JavaScript file
@@ -405,6 +541,8 @@ yo aspnet-xtianus:JavaScript filename
 ```
 
 Produces `filename.js`
+
+[Return to top](#top)
 
 ### JScript
 
@@ -418,6 +556,8 @@ yo aspnet-xtianus:JScript filename
 
 Produces `filename.js`
 
+[Return to top](#top)
+
 ### JSON
 
 Creates a new JSON file
@@ -429,6 +569,50 @@ yo aspnet-xtianus:JSON filename
 ```
 
 Produces `filename.json`
+
+[Return to top](#top)
+
+### JSONSchema
+
+Creates a new JSON schema file
+
+Example:
+
+```
+yo aspnet:JSONSchema filename
+```
+
+Produces `filename.json`
+
+[Return to top](#top)
+
+### JSX
+
+Creates a new React JSX file
+
+Example:
+
+```
+yo aspnet:JSX filename
+```
+
+Produces `filename.jsx`
+
+[Return to top](#top)
+
+### Middleware
+
+Creates a new C# Middleware class file
+
+Example:
+
+```
+yo aspnet:Middleware filename
+```
+
+Produces `filename.cs`
+
+[Return to top](#top)
 
 ### PackageJson
 
@@ -442,6 +626,64 @@ yo aspnet-xtianus:PackageJson
 
 Produces `package.json`
 
+[Return to top](#top)
+
+### StyleSheet
+
+Creates a new CSS file
+
+Example:
+
+```
+yo aspnet:StyleSheet style
+```
+
+Produces `style.css`
+
+[Return to top](#top)
+
+### StyleSheetLess
+
+Creates a new Less class file
+
+Example:
+
+```
+yo aspnet:StyleSheetLess filename
+```
+
+Produces `filename.less`
+
+[Return to top](#top)
+
+### StyleSheetSCSS
+
+Creates a new Sass SCSS class file
+
+Example:
+
+```
+yo aspnet:StyleSheetSCSS filename
+```
+
+Produces `filename.scss`
+
+[Return to top](#top)
+
+### TagHelper
+
+Creates a new TagHelper class file
+
+Example:
+
+```
+yo aspnet:TagHelper filename
+```
+
+Produces `filename.cs`
+
+[Return to top](#top)
+
 ### TextFile
 
 Creates a new Text file
@@ -453,6 +695,8 @@ yo aspnet-xtianus:TextFile filename
 ```
 
 Produces `filename.txt`
+
+[Return to top](#top)
 
 ### TypeScript
 
@@ -466,6 +710,21 @@ yo aspnet-xtianus:TypeScript filename
 
 Produces `filename.ts`
 
+[Return to top](#top)
+
+### TypeScriptConfig
+
+Creates a new TypeScript configuration file
+
+Example:
+
+```
+yo aspnet:TypeScriptConfig
+```
+
+Produces `tsconfig.json`
+
+[Return to top](#top)
 
 ## License
 
@@ -485,3 +744,4 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ..see **Coming soon** [CHANGELOG.md](https://github.com/xtianus79/generator-aspnet/blob/master/CHANGELOG.md) file
 
+[Return to top](#top)

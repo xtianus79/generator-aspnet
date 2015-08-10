@@ -1,7 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
-namespace SampleTests.Tests
+
+namespace <%= namespace %>
 {
-    public class MyTests
+    public class SampleTest
     {
         [Fact]
         public void Test1()

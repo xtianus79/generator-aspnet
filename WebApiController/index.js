@@ -3,15 +3,17 @@ var util = require('util');
 var ScriptBase = require('../script-base.js');
 
 var NamedGenerator = module.exports = function NamedGenerator() {
-	ScriptBase.apply(this, arguments);
-}
+  ScriptBase.apply(this, arguments);
+};
 
 util.inherits(NamedGenerator, ScriptBase);
 
-NamedGenerator.prototype.createNamedItem = function(){
-	this.generateTemplateFile(
-		'apicontroller.cs',
-		this.name + '.cs',
-		{ namespace: 'MyNamespace', classname: this.name }	
-	);
+NamedGenerator.prototype.createNamedItem = function() {
+  this.generateTemplateFile(
+    'WebApiController.cs',
+    this.name + '.cs', {
+      namespace: 'MyNamespace',
+      classname: this.name
+    }
+  );
 };

@@ -28,8 +28,6 @@ var util = (function() {
     });
   }
 
-
-
   function goCreateApplication(type, applicationName) {
     before(function(done) {
 
@@ -69,8 +67,8 @@ var util = (function() {
 
   function dirsCheck(dirs) {
     describe('Directories Creation', function() {
-
       for (var i = 0; i < dirs.length; i++) {
+        /*jshint loopfunc: true */
         it(dirs[i] + ' created.', function() {
           assert.file(dirs[i]);
         });
@@ -87,7 +85,7 @@ var util = (function() {
       assert.file(file);
     });
 
-  };
+  }
 
   function dirCheck(message, dir) {
     describe('Directory Creation', function() {
