@@ -10,11 +10,6 @@
   },
   "contributors": [
     {
-      "name": "Christian Matthias",
-      "email": "xtianus@live.com",
-      "url": "https://github.com/xtianus79"
-    },
-    {
       "name": "Sourabh Shirhatti",
       "email": "shirhatti@outlook.com",
       "url": "https://github.com/shirhatti"
@@ -52,27 +47,21 @@
     "ASP",
     "net",
     "vNext",
-    "foundation",
-    "foundation5",
-    "zurb"
     "dnx"
   ],
   "dependencies": {
-    "chai": "~2.3.0",
-    "chalk": "~1.0.0",
+    "chai": "^1.10.0",
+    "chalk": "^1.0.0",
     "uuid": "^2.0.1",
-    "yeoman-generator": "~0.20.1",
-    "yosay": "~1.0.4",
-    "mkdirp": "^0.5.1"
     "vs_projectname": "^1.0.0",
     "yeoman-generator": "^0.19.0",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.2.3",
+    "mocha": "^2.2.1"
   },
   "scripts": {
     "test": "mocha"
-  }
+  },
 
 }
