@@ -56,7 +56,8 @@
     "ASP",
     "net",
     "vNext",
-    "dnx"
+    "dnx",
+    "foundation"
   ],
   "dependencies": {
     "chai": "~2.3.0",
