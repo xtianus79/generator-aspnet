@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "main": "app/index.js",
   "repository": "xtianus79/generator-aspnet",
-  "homepage": "https://github.com/xtianus79/generator-aspnet",
+  "homepage": "https://github.com/xtianus79/generator-aspnet.git",
   "bugs": "https://github.com/xtianus79/generator-aspnet/issues",
   "author": {
     "name": "Christian Matthias",
